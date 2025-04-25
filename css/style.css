@@ -1,0 +1,113 @@
+/*Comentarios*/
+/*propioedades de valor*/
+
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/*font-family: "Lora", serif; */
+
+/*font textos*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font-family: "Poppins", san serif; */
+
+/*
+#EFF2F9 BLANCO
+#E4EBF1 GRIS CLARO
+#BSBFC6 GRIS
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:"Poppins", san serif;
+    font-size: 62.5%; /*1rem=10px*/
+}
+
+h1{
+    color: black;
+    font-family: "Lora", serif;
+}
+
+p{
+    color: rgb(0, 0, 0);
+}
+
+/*header*/
+header{
+    background-color:#E4EBF1;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+
+header img{
+    width: 70px;
+    margin: 3px;
+}
+
+nav{
+    width: 40%;
+}
+
+header ul{
+    height: 100%;
+    margin-right: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+
+/*main index--------------------------------------------------------*/
+
+.banner{
+    background-color: #EFF2F9;
+    height: 800px;
+    background-position: right
+}
+
+
+/*main proyectos-----------------------------------------------------*/
+
+.proyectos-diseno h1{
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 40px 0px;
+}
+
+
+.proyectos{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*footer------------------------------------------------------------*/
+footer{
+    background-color:#E4EBF1;
+}
+
+footer img{
+    width: 30px;
+}
+
+footer text{
+    text-align: center;
+}
+
+
+
+
