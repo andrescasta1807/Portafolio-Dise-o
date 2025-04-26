@@ -10,7 +10,7 @@
 /*font-family: "Poppins", san serif; */
 
 /*
-#EFF2F9 BLANCO
+#f9f9fa BLANCO
 #E4EBF1 GRIS CLARO
 #BSBFC6 GRIS
 */
@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f9f9fa;
 }
 
 html{
@@ -35,14 +36,9 @@ p{
     color: rgb(0, 0, 0);
 }
 
-/*header*/
-header{
-    background-color:#E4EBF1;
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0px;
-}
+
+
+/*header----------------------------------------------------------------*/
 
 header img{
     width: 70px;
@@ -55,7 +51,8 @@ nav{
 
 header ul{
     height: 100%;
-    margin-right: 30px;
+    padding: 40px 60px;
+    margin-right: 10px;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -63,29 +60,52 @@ header ul{
 }
 
 
-nav a{
+.nav-item{
+    display: flex;
+    justify-content: center;
     color: black;
+    font-family:"Poppins", san serif;
+    font-size: 62.5%; /*1rem=10px*/
     text-decoration: none;
     font-size: 1.3rem;
+    margin-left: 35px;
+}
+
+.nav-link{
+    color: black;
 }
 
 
-/*main index--------------------------------------------------------*/
+/*main index------------------------------------------------------------*/
 
-.banner{
-    background-color: #EFF2F9;
-    height: 800px;
-    background-position: right
+.banner-principal{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 628px;
 }
 
 
-/*main proyectos-----------------------------------------------------*/
+.banner-informacion-escrita{
+    display: flex;
+}
+
+
+.texto-principal-banner{
+    display: contents;
+}
+
+
+
+/*main proyectos--------------------------------------------------------*/
+
 
 .proyectos-diseno h1{
     text-align: center;
     text-decoration: none;
     font-size: 2rem;
-    margin: 40px 0px;
+padding-top: 100px;
 }
 
 
@@ -95,7 +115,14 @@ nav a{
 }
 
 
-/*footer------------------------------------------------------------*/
+/*servicios-------------------------------------------------------------*/
+
+
+
+
+
+
+/*footer----------------------------------------------------------------*/
 footer{
     background-color:#E4EBF1;
 }
