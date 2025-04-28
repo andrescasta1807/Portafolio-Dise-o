@@ -19,17 +19,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f9f9fa;
 }
 
+
 html{
-    font-family:"Poppins", san serif;
+    font-family:"Poppins", sans-serif;
     font-size: 62.5%; /*1rem=10px*/
 }
 
 h1{
     color: black;
-    font-family: "Lora", serif;
+    font-family:"Poppins", sans-serif;
+    font-weight: 300;
+}
+
+h2{
+    color: black;
+    font-family:"Poppins", sans-serif;
+    font-weight: 200;
 }
 
 p{
@@ -40,63 +47,89 @@ p{
 
 /*header----------------------------------------------------------------*/
 
-header img{
-    width: 70px;
-    margin: 3px;
-}
-
-nav{
-    width: 40%;
-}
-
-header ul{
-    height: 100%;
-    padding: 40px 60px;
-    margin-right: 10px;
-    list-style: none;
+header{
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    position: sticky;
+    top: 0px;
+    padding: 0px 0px 20px 0px;
 }
 
+header img{
+    width: 50px;
+    margin: 25px;
+    margin-left: 35px;
+    position: sticky;
+}
+
+header ul {
+
+    height: 100%;
+    margin-right: 50px;
+    list-style: none;
+
+}
+
+.bg-body-tertiary{
+    --bs-bg-opacity: 0;
+}
+
+.navbar-nav{
+    color: black;
+    font-family: "Poppins",sans-serif;
+    font-size: 1.2rem; /*1rem=10px*/
+
+}
 
 .nav-item{
-    display: flex;
-    justify-content: center;
-    color: black;
-    font-family:"Poppins", san serif;
-    font-size: 62.5%; /*1rem=10px*/
-    text-decoration: none;
-    font-size: 1.3rem;
-    margin-left: 35px;
-}
-
-.nav-link{
-    color: black;
+    margin-left: 4rem;
 }
 
 
 /*main index------------------------------------------------------------*/
 
 .banner-principal{
+    background-size: cover;
     display: flex;
     align-items: center;
     flex-direction: row;
     width: 100%;
-    height: 628px;
+    padding: 75px 0px 0px 0px;
 }
 
 
 .banner-informacion-escrita{
-    display: flex;
+    display: block;
+    width: 50%;
 }
 
+.banner-principal-foto-yo{
+    display: block;
+    position: relative;
+    width: 50%;
+    left: 4.5%;
+}
+
+.foto-yo{
+    display: block;
+    position: relative;
+
+}
 
 .texto-principal-banner{
-    display: contents;
+    display: block;
+    position: relative;
+    font-size: 5rem;
+    bottom: 50px;
 }
 
-
+.texto-descripcion-profesional{
+    display: block;
+    position: relative;
+    top: 60px;
+    padding: 0px 300px 0px 0px;
+}
 
 /*main proyectos--------------------------------------------------------*/
 
@@ -115,6 +148,7 @@ padding-top: 100px;
 }
 
 
+
 /*servicios-------------------------------------------------------------*/
 
 
@@ -123,18 +157,90 @@ padding-top: 100px;
 
 
 /*footer----------------------------------------------------------------*/
-footer{
-    background-color:#E4EBF1;
+.pie-de-pagina{
+    width: 100%;
+    background-color:#000000;
+    padding: 20px 0px;
 }
 
-footer img{
+.pie-de-pagina .grupo-1{
+    background-color: #000000;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.box-logo figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-logo figure img{
+    width: 50px;
+}
+
+.paginas{
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-paginas{
+    background-color: #000000;
+    list-style: none;
+    display: flex;
+}
+
+.footer-item a{
+    color: rgb(255, 255, 255);
+    font-family: "Poppins",sans-serif;
+    font-size: 1.2rem; /*1rem=10px*/
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 50px;
+}
+
+.redes-sociales{
+    justify-content: center;
+    align-items: center;
+}
+
+
+.redes-sociales a{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    line-height: 100px;
+    margin-right: 20px;
+}
+
+.redes-sociales figure img{
     width: 30px;
+    opacity: 0.9;
 }
 
-footer text{
-    text-align: center;
+.redes-sociales p{
+    display: block;
+    position: relative;
+    color: #ffffff;
+    font-family: "Poppins",sans-serif;
+    font-size: 1.2rem; /*1rem=10px*/
+    letter-spacing: 0.2rem;
+    bottom: 20px;
+
 }
 
 
 
+/*Responsive------------------------------------------------------------*/
+/*mobile*/
+
+@media (max-width:480px) 
 
