@@ -104,6 +104,7 @@ figure{
     justify-content: center;
     align-items: center;
     padding: 8rem 0rem 0rem 0rem;
+    overflow: hidden;
 }
 
 
@@ -300,8 +301,7 @@ figure{
 }
 
 
-
-    /* Responsive------------------------------------------------------------ */
+/* Responsive------------------------------------------------------------ */
 /* mobile */
 
 @media (max-width: 480px) {
@@ -422,10 +422,8 @@ figure{
     .proyectos-texto .palabra-clave-diseno span {
         margin-right: 1rem;
     }
-}
 
 
-    /* FOOTER */
     .pie-de-pagina .grupo-1 {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -439,10 +437,6 @@ figure{
     .footer-paginas {
         flex-direction: row;
         align-items: center;
-    }
-
-    .footer-item a {
-        margin left: 2rem;
     }
 
     .redes-sociales {
@@ -460,5 +454,4 @@ figure{
         width: 25px;
     }
 
-    .redes-sociales
 }
