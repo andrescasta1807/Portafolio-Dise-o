@@ -31,19 +31,23 @@ h1{
     color: black;
     font-family:"Poppins", sans-serif;
     font-weight: 300;
+    font-size: 5rem;
 }
 
 h2{
     color: black;
     font-family:"Poppins", sans-serif;
     font-weight: 200;
+    font-size: 2rem;
 }
 
 p{
     color: rgb(0, 0, 0);
 }
 
-
+ul{
+    padding-left: 0rem;
+}
 
 /*header----------------------------------------------------------------*/
 
@@ -53,20 +57,20 @@ header{
     justify-content: space-between;
     position: sticky;
     top: 0px;
-    padding: 0px 0px 20px 0px;
+    border: #ffffff;
 }
 
 header img{
-    width: 50px;
-    margin: 25px;
-    margin-left: 35px;
+    width: 4rem;
+    margin: 2.5rem;
+    margin-left: 2.5rem;
     position: sticky;
 }
 
 header ul {
 
     height: 100%;
-    margin-right: 50px;
+    margin-right: 8rem;
     list-style: none;
 
 }
@@ -86,67 +90,125 @@ header ul {
     margin-left: 4rem;
 }
 
+figure{
+    margin: 0 0 0rem;
+}
+
+
 
 /*main index------------------------------------------------------------*/
 
 .banner-principal{
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
     width: 100%;
-    padding: 75px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0rem 0rem 0rem;
 }
 
 
 .banner-informacion-escrita{
     display: block;
+    position: relative;
     width: 50%;
+    margin-left: 25rem;
 }
 
-.banner-principal-foto-yo{
+.banner-principal-foto-yo a{
     display: block;
     position: relative;
     width: 50%;
-    left: 4.5%;
+    margin-left: 10rem;
 }
 
-.foto-yo{
+.banner-principal-foto-yo figure img{
     display: block;
     position: relative;
+    width: 70rem;
 
 }
 
 .texto-principal-banner{
     display: block;
     position: relative;
-    font-size: 5rem;
-    bottom: 50px;
+    bottom: 3.125rem;
 }
 
 .texto-descripcion-profesional{
     display: block;
     position: relative;
-    top: 60px;
-    padding: 0px 300px 0px 0px;
+    top: 3.75rem;
+    padding: 0rem 30rem 0rem 0rem;
 }
+
+
 
 /*main proyectos--------------------------------------------------------*/
 
-
-.proyectos-diseno h1{
-    text-align: center;
-    text-decoration: none;
-    font-size: 2rem;
-padding-top: 100px;
-}
-
-
 .proyectos{
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 20rem;
 }
 
+
+.galeria-1{
+    width: 100%;
+    display: flex;
+    padding: 3.5rem 0rem 0rem 0rem;
+}
+
+.galeria-2{
+    width: 100%;
+    display: flex;
+    padding: 2rem 0rem 0rem 0rem;
+}
+
+
+.imagen-proyecto{
+    width: 100%;
+    max-width: 40rem;
+    height: 40rem;
+    margin-right: 2rem;
+}
+
+.imagen-proyecto img{
+    width: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    transition: all .3s ease-in-out;
+}
+
+.imagen-proyecto img:hover{
+    transform: scale(1.05);
+}
+
+.proyectos-texto{
+    width: 100%;
+    display: block;
+    position: relative;
+    text-align: right;
+    align-items: center;
+    bottom: 48rem;
+}
+
+.titulo-proyectos{
+    padding: 0rem 31rem;
+}
+
+.proyectos-texto .palabra-clave{
+    padding: 2rem 20rem 0rem 0rem;
+}
+
+.proyectos-texto .palabra-clave-diseno{
+    font-size: 1.5rem;
+}
+
+.proyectos-texto .palabra-clave-diseno span{
+    margin-right: 5rem;
+}
 
 
 /*servicios-------------------------------------------------------------*/
@@ -160,7 +222,7 @@ padding-top: 100px;
 .pie-de-pagina{
     width: 100%;
     background-color:#000000;
-    padding: 20px 0px;
+    padding: 2rem 0rem;
 }
 
 .pie-de-pagina .grupo-1{
@@ -180,7 +242,7 @@ padding-top: 100px;
 }
 
 .box-logo figure img{
-    width: 50px;
+    width: 3.5rem;
 }
 
 .paginas{
@@ -204,7 +266,7 @@ padding-top: 100px;
     font-size: 1.2rem; /*1rem=10px*/
     text-decoration: none;
     margin-left: 1rem;
-    margin-right: 50px;
+    margin-right: 3.125rem;
 }
 
 .redes-sociales{
@@ -217,8 +279,8 @@ padding-top: 100px;
     display: inline-block;
     justify-content: center;
     align-items: center;
-    line-height: 100px;
-    margin-right: 20px;
+    line-height: 6.25rem;
+    margin-right: 2rem;
 }
 
 .redes-sociales figure img{
@@ -232,15 +294,171 @@ padding-top: 100px;
     color: #ffffff;
     font-family: "Poppins",sans-serif;
     font-size: 1.2rem; /*1rem=10px*/
+    font-weight: 200;
     letter-spacing: 0.2rem;
-    bottom: 20px;
 
 }
 
 
 
-/*Responsive------------------------------------------------------------*/
-/*mobile*/
+    /* Responsive------------------------------------------------------------ */
+/* mobile */
 
-@media (max-width:480px) 
+@media (max-width: 480px) {
 
+    /* HEADER */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    header img {
+        margin: 2rem auto;
+        width: 3.5rem;
+    }
+
+    header ul {
+        margin: 1rem 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+
+    /* BANNER PRINCIPAL */
+    .banner-principal {
+        flex-direction: column;
+        padding: 4rem 2rem 0 2rem;
+    }
+
+    .banner-informacion-escrita {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .banner-principal-foto-yo a {
+        width: 100%;
+        margin: 2rem 0 ;
+    }
+
+    .banner-principal-foto-yo figure img {
+        width: 90%;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .texto-principal-banner {
+        font-size: 3rem;
+        bottom: 0;
+    }
+
+    .texto-descripcion-profesional {
+        font-size: 1.5rem;
+        padding: 0 2rem;
+        top: 2rem;
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+
+    
+    /* PROYECTOS */
+    .proyectos {
+        width: 100%;
+        display: block;
+        padding: 0 2rem;
+    }
+
+    .galeria-1,
+    .galeria-2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0 0 0;
+    }
+
+    .imagen-proyecto {
+        width: 90%;
+        max-width: 30rem;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .imagen-proyecto img {
+        border-radius: 1rem;
+    }
+
+    .proyectos-texto {
+        width: 100%;
+        display: block;
+        position: static;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .titulo-proyectos {
+        font-size: 110rem;
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+
+    .proyectos-texto .palabra-proyectos {
+        font-size: 3rem;
+    }
+
+
+    .proyectos-texto .palabra-clave {
+        padding: 1rem 0 3.5rem 0rem;
+        text-align: center;
+    }
+
+    .proyectos-texto .palabra-clave-diseno {
+        font-size: 1.4rem;
+    }
+
+    .proyectos-texto .palabra-clave-diseno span {
+        margin-right: 1rem;
+    }
+}
+
+
+    /* FOOTER */
+    .pie-de-pagina .grupo-1 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .paginas {
+        flex-direction: column;
+        padding-top: 3.5rem;
+    }
+
+    .footer-paginas {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-item a {
+        margin left: 2rem;
+    }
+
+    .redes-sociales {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .redes-sociales a {
+        margin: 0.5rem;
+    }
+
+    .redes-sociales figure img {
+        width: 25px;
+    }
+
+    .redes-sociales
+}
