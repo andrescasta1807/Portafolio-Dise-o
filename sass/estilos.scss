@@ -2,6 +2,345 @@
 @use "./partials/variables"; 
 @use "./partials/headeryfooter";
 
+/*main index------------------------------------------------------------*/
+
+
+.banner-principal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0rem 0rem 0rem;
+    overflow: hidden;
+
+    /*foto index*/
+
+     figure{
+    margin: 0 0 0rem;
+    }
+
+    .banner-principal-foto-yo a{
+    display: block;
+    position: relative;
+    width: 50%;
+    margin-left: 10rem;
+    }
+
+    .banner-principal-foto-yo figure img{
+    display: block;
+    position: relative;
+    width: 70rem;
+    }
+
+    /*informacion escrita*/
+
+    .banner-informacion-escrita{
+    display: block;
+    position: relative;
+    width: 50%;
+    margin-left: 25rem;
+
+     .texto-principal-banner{
+     display: block;
+     position: relative;
+     bottom: 3.125rem;
+     }
+
+     .texto-descripcion-profesional{
+     display: block;
+     position: relative;
+     top: 3.75rem;
+     padding: 0rem 30rem 0rem 0rem;
+     }
+    }
+   
+}
+
+
+/*main proyectos--------------------------------------------------------*/
+
+.proyectos{
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 30rem;
+
+    /*fotos proyectos*/
+
+    .galeria-1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem 0rem 0rem 0rem;
+    }
+
+    .imagen-proyecto{
+    width: 100%;
+    max-width: 40rem;
+    margin-bottom: 2rem;
+    }
+
+    .imagen-proyecto img{
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    transition: all .3s ease-in-out;
+    }
+
+    .imagen-proyecto img:hover{
+    transform: scale(1.05);
+    }
+}
+
+/*texto presentacion proyectos*/
+
+.proyectos-texto{
+    width: 100%;
+    display: block;
+    position: sticky;
+    align-items: center;
+    text-align: left;
+    bottom: 32.5rem;
+
+     .titulo-proyectos{
+     margin-top: 50rem;
+     padding: 0rem 20rem 0rem 100rem;
+     }
+
+     .palabra-clave{
+     padding: 10rem 25rem 0rem 100rem;
+    } 
+
+}
+
+
+/*main servicios--------------------------------------------------------*/   
+
+.servicios{
+    width: 100%;
+    height: auto;
+    display: block;
+    align-items: center;
+    text-align: left;
+    padding: 15rem 40rem;
+
+    /*texto intro servicios*/
+
+    .intro-servicios{
+        text-align: center;
+        padding-bottom: 10rem;
+
+        .titulo-servicios{
+            padding: 0rem 20rem;
+            padding-bottom: 12rem;
+        }
+
+        .discripcion-servicios{
+            padding-bottom: 4.3rem;
+        }
+    }
+
+    /*acordeon servicios*/
+
+    .accordion-item{
+        font-family: "Poppins",sans-serif;
+        font-size: 1.6rem; /*1rem=10px*/
+        margin-bottom: 2rem;
+        font-weight: 300;
+
+        .accordion-body{
+            padding: 2rem;
+        }
+
+        .accordion-button{
+            font-size: 1.8rem;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: white; 
+            color: #000; 
+            box-shadow: none;
+        }
+
+
+    }
+
+    /*boton contacto servicios*/
+
+    .final-servicios{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 12rem;
+
+        .call-to-action{
+            font-family: "Poppins",sans-serif;
+            font-size: 2.5rem; /*1rem=10px*/
+            font-weight:400;
+            padding-bottom: 3rem;
+        }
+
+
+        .btn-contactame {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        padding: 1.5rem 3rem;
+        font-family: "Poppins",sans-serif;
+        font-size: 1.5rem;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 30px; 
+        transition: all 0.3s ease;
+        }
+
+      .btn-contactame:hover {
+       background-color: black;
+       color: white;
+       }
+
+    }
+
+}
+
+
+/*main sobre mi--------------------------------------------------------*/
+
+.sobre-mi {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 3rem;
+  padding: 9rem 20rem;
+
+  .foto{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+  }
+
+  .texto-principal{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20rem;
+
+    h1{
+        line-height: 3;
+    }
+  }
+
+
+  .texto-secundario{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    padding-top:  3rem;
+  }
+
+  .experiencia-columnas {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 7rem;
+    padding: 6rem 0rem;
+    margin-top: 3rem;
+    border-top: 1px solid #E4EBF1;
+  }
+
+  .experiencia-item h2 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .experiencia-item .empresa {
+    font-family: "Poppins",sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .experiencia-item ul {
+    padding-left: 1.5rem;
+  }
+
+  .experiencia-item ul li {
+    margin-bottom: 6px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*main contacto--------------------------------------------------------*/
+
+.contacto {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 25rem 2.5rem;
+  gap: 12.5rem;
+
+  .contacto-titulo h1 {
+  font-size: 64px;
+  font-weight: bold;
+  }
+
+  .contacto-descripcion{
+    padding-top: 5rem;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+
+    input[type="submit"] {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    }
+  }
+
+}
+
 
 
 

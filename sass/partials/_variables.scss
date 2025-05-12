@@ -39,6 +39,11 @@ h2{
     font-size: 2rem;
 }
 
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}
+
 p{
     color: rgb(0, 0, 0);
 }
@@ -50,4 +55,68 @@ ul{
 // entend
 
 // mixin
+
+@mixin texto-contacto{
+    font-family: "Poppins",sans-serif;
+    max-width: 350px;
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+@mixin input-formularios{
+    padding: 1rem;
+    font-size: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.25rem;
+}
+
+@mixin freelance-trabajos{
+    font-family: "Poppins",sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.contacto-descripcion{
+    @include texto-contacto
+  }
+
+.contacto-info{
+    @include texto-contacto
+}
+
+.contacto-social{
+    @include texto-contacto
+}
+
+.contacto-formulario{
+    @include texto-contacto
+}
+
+input[type="text"]{
+    @include input-formularios
+}
+
+input[type="email"]{
+    @include input-formularios
+}
+
+input[type="number"]{
+    @include input-formularios
+}
+
+textarea{
+    @include input-formularios
+}
+
+.experiencia-item p{
+    @include freelance-trabajos
+}
+.experiencia-item ul{
+    @include freelance-trabajos
+}
+
+
+
 

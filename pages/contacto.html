@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <title>Contacto</title>
-    <!--css-->
-    <link rel="stylesheet" href="../css/style.css">
+
+      <!-- css vinculado sass -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
 </head>
 
 <body>
@@ -45,25 +47,63 @@
     </header>
 
     <main>
-        <!--Contacto-->
-        <h1>Contacto</h1>
-        <img src="../medios/foto fondo contacto.jpg" alt="" width="600px">
 
-        <!--Formulario-->
-        <section>
-            <h2>Trabajemos juntos</h2>
-            <form action="">
-                <label for="">Nombre</label>
-                <input type="text">
-                <label for="">Email</label>
-                <input type="email">
-                <label for="">Telefono</label>
-                <input type="number">
-                <p>Mensaje</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
+  <!-- Contenido principal en hilera -->
+  <section class="contacto">
+    <div>
+    <!-- Título -->
+    <div class="contacto-titulo">
+      <h1>Contactame</h1>
+    </div>
+
+    <!-- Descripción -->
+    <div class="contacto-descripcion">
+      <p>Tu proyecto no puede esperar más.<br> No lo pienses más: escribime y pongamos manos a la obra.
+Estoy listo para llevar tu proyecto al próximo nivel.</p>
+    </div>
+    </div>
+
+    <!-- Info de contacto -->
+    <div class="contacto-info">
+      <h3>INFORMACIÓN GENERAL</h3>
+      <p><strong>Andres Castañeda</strong><br>
+      Diseñador Industrial<br>
+      Diseñador Gráfico<br>
+      Diseñador UX/UI<br>
+      Creador de empaque<br>
+      Desarrollador de estrategias<br><br>
+      Celular:<br> +57 310 584 8534<br><br>
+      Email:<br> andresc4115@gmail.com</p>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="contacto-social">
+      <h3>SOCIAL MEDIA</h3>
+      <p>Pinterest<br>LinkedIn<br>Behance</p>
+    </div>
+
+    <!-- Formulario -->
+    <div class="contacto-formulario">
+      <h3>TRABAJEMOS JUNTOS</h3>
+      <form>
+        <label for="name">Nombre</label>
+        <input type="text">
+
+        <label for="email">Email</label>
+        <input type="email">
+
+        <label for="phone">Teléfono</label>
+        <input type="text">
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" cols="30" rows="3"></textarea>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+  </section>
+</main>
+
     </main>
 
     <!--footer-->
