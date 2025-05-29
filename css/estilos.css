@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*font*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 /*font-family: "Lora", serif; */
@@ -116,6 +117,36 @@ textarea {
   font-weight: 300;
 }
 
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*header----------------------------------------------------------------*/
 header {
   background-color: #ffffff;
@@ -123,7 +154,9 @@ header {
   justify-content: space-between;
   position: sticky;
   top: 0px;
+  width: 100%;
   border: #ffffff;
+  z-index: 1000;
 }
 header img {
   width: 4rem;
@@ -229,12 +262,13 @@ header ul {
   justify-content: center;
   align-items: center;
   padding: 8rem 0rem 0rem 0rem;
+  margin-top: 8rem;
   overflow: hidden;
   /*foto index*/
   /*informacion escrita*/
 }
 .banner-principal figure {
-  margin: 0 0 0rem;
+  margin: 0rem;
 }
 .banner-principal .banner-principal-foto-yo a {
   display: block;
@@ -246,6 +280,9 @@ header ul {
   display: block;
   position: relative;
   width: 70rem;
+  opacity: 0;
+  animation: fadeInSlide 1s ease-out forwards;
+  animation-delay: 0.5s;
 }
 .banner-principal .banner-informacion-escrita {
   display: block;
@@ -257,12 +294,20 @@ header ul {
   display: block;
   position: relative;
   bottom: 3.125rem;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 .banner-principal .banner-informacion-escrita .texto-descripcion-profesional {
   display: block;
   position: relative;
   top: 3.75rem;
   padding: 0rem 30rem 0rem 0rem;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 
 /*main proyectos--------------------------------------------------------*/
@@ -279,9 +324,11 @@ header ul {
   display: flex;
   flex-direction: column;
   padding: 3.5rem 0rem 0rem 0rem;
+  opacity: 0;
+  animation: fadeInSlide 1s ease-out forwards;
+  animation-delay: 0.5s;
 }
 .proyectos .imagen-proyecto {
-  width: 100%;
   max-width: 40rem;
   margin-bottom: 2rem;
 }
@@ -292,7 +339,7 @@ header ul {
   transition: all 0.3s ease-in-out;
 }
 .proyectos .imagen-proyecto img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /*texto presentacion proyectos*/
@@ -305,11 +352,18 @@ header ul {
   bottom: 32.5rem;
 }
 .proyectos-texto .titulo-proyectos {
-  margin-top: 50rem;
   padding: 0rem 20rem 0rem 100rem;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 .proyectos-texto .palabra-clave {
   padding: 10rem 25rem 0rem 100rem;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 
 /*main servicios--------------------------------------------------------*/
@@ -320,6 +374,10 @@ header ul {
   align-items: center;
   text-align: left;
   padding: 15rem 40rem;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeInDown 1.2s ease-out forwards;
+  animation-delay: 1s;
   /*texto intro servicios*/
   /*acordeon servicios*/
   /*boton contacto servicios*/
@@ -402,6 +460,9 @@ header ul {
   width: 100%;
   height: auto;
   object-fit: cover;
+  opacity: 0;
+  animation: fadeInSlide 1.4s ease-out forwards;
+  animation-delay: 0.5s;
 }
 .sobre-mi .texto-principal {
   grid-row: 1/2;
@@ -410,6 +471,10 @@ header ul {
   flex-direction: column;
   justify-content: center;
   padding-left: 20rem;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 .sobre-mi .texto-principal h1 {
   line-height: 3;
@@ -418,6 +483,10 @@ header ul {
   grid-column: 1/3;
   grid-row: 2/3;
   padding-top: 3rem;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 .sobre-mi .experiencia-columnas {
   grid-column: 1/3;
@@ -427,6 +496,10 @@ header ul {
   padding: 6rem 0rem;
   margin-top: 3rem;
   border-top: 1px solid #E4EBF1;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeInDown 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 .sobre-mi .experiencia-item h2 {
   font-weight: bold;
@@ -454,6 +527,10 @@ header ul {
   justify-content: center;
   padding: 25rem 2.5rem;
   gap: 12.5rem;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeInDown 1.2s ease-out forwards;
+  animation-delay: 1s;
 }
 .contacto .contacto-titulo h1 {
   font-size: 64px;
@@ -474,6 +551,280 @@ header ul {
   padding: 1rem;
   cursor: pointer;
   font-weight: bold;
+}
+
+/* Responsive------------------------------------------------------------ */
+/* mobile */
+@media (max-width: 767px) and (min-width: 360px) {
+  html {
+    font-size: 50%; /* 1rem = 8.8px aprox */
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+  }
+  ul {
+    padding-left: 2rem;
+  }
+  /*header*/
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0rem;
+  }
+  header img {
+    margin: 4rem 0;
+    width: 5rem;
+  }
+  header ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  header ul .navbar-nav .nav-item {
+    margin-left: 3rem;
+  }
+  /*footer*/
+  .pie-de-pagina .grupo-1 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .pie-de-pagina .paginas .footer-paginas {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  /*index*/
+  .banner-principal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 5rem 10rem 5rem;
+    gap: 8em;
+  }
+  .banner-principal .banner-principal-foto-yo a,
+  .banner-principal .banner-informacion-escrita {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .banner-principal .banner-principal-foto-yo figure img {
+    width: 100%;
+  }
+  .banner-principal .banner-informacion-escrita .texto-descripcion-profesional {
+    padding: 0;
+  }
+  /*proyectos*/
+  .proyectos {
+    padding: 0rem 5rem;
+  }
+  .proyectos .galeria-1 {
+    padding-top: 5rem;
+    align-items: center;
+  }
+  .proyectos .imagen-proyecto {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .proyectos-texto {
+    position: relative;
+    bottom: auto;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 0rem 5rem;
+  }
+  .proyectos-texto .titulo-proyectos,
+  .proyectos-texto .palabra-clave {
+    padding: 0;
+    margin: 5rem 0;
+  }
+  /*servicios*/
+  .servicios {
+    padding: 5rem 5rem;
+  }
+  .servicios .intro-servicios .titulo-servicios {
+    padding: 5rem 2.5rem;
+  }
+  /*sobre mi*/
+  .sobre-mi {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    padding: 0rem 5rem;
+  }
+  .sobre-mi .foto {
+    padding: 5rem 0 0 0;
+    grid-column: 1/2;
+    grid-row: auto;
+  }
+  .sobre-mi .texto-principal {
+    grid-column: 1/2;
+    grid-row: auto;
+    padding-left: 0;
+    text-align: center;
+  }
+  .sobre-mi .texto-principal h1 {
+    line-height: 2.5;
+  }
+  .sobre-mi .texto-secundario {
+    grid-column: 1/2;
+    grid-row: auto;
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .sobre-mi .experiencia-columnas {
+    grid-column: 1/2;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 8rem;
+    margin-top: 1rem;
+  }
+  .sobre-mi .experiencia-item ul {
+    padding-left: 0;
+  }
+  /*contacto*/
+  .contacto {
+    flex-direction: column;
+    padding: 10rem 5rem;
+    gap: 6rem;
+    align-items: center;
+    text-align: center;
+  }
+  .contacto .contacto-titulo h1 {
+    font-size: 3.5rem;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=number],
+  textarea {
+    font-size: 1.6rem;
+  }
+  .servicios .final-servicios .call-to-action {
+    font-size: 2rem;
+  }
+  .servicios .final-servicios .btn-contactame {
+    font-size: 1.4rem;
+    padding: 1.2rem 2.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  html {
+    font-size: 55%; /* 1rem = 9px */
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+  /* Header */
+  header {
+    padding: 1rem 3rem;
+  }
+  header img {
+    width: 5rem;
+    margin: 1.5rem;
+  }
+  header ul {
+    margin-right: 4rem;
+  }
+  .navbar-nav .nav-item {
+    margin-left: 3rem;
+  }
+  /* Banner principal */
+  .banner-principal {
+    flex-direction: row;
+    padding: 5rem 5rem 0 5rem;
+    margin-top: 5rem;
+  }
+  .banner-principal .banner-principal-foto-yo a {
+    width: 40%;
+    margin-left: 5rem;
+  }
+  .banner-principal .banner-principal-foto-yo figure img {
+    width: 50rem;
+  }
+  .banner-principal .banner-informacion-escrita {
+    width: 60%;
+    margin-left: 8rem;
+  }
+  .banner-principal .banner-informacion-escrita .texto-descripcion-profesional {
+    padding: 0rem 10rem 0rem 0rem;
+  }
+  /* Proyectos */
+  .proyectos {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 5rem;
+    max-width: 100%;
+  }
+  .proyectos .galeria-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    max-width: 100%;
+  }
+  .proyectos .imagen-proyecto {
+    max-width: 30rem;
+  }
+  .proyectos-texto {
+    padding: 0rem 10rem;
+    margin-bottom: 7rem;
+    bottom: auto;
+    position: relative;
+  }
+  .proyectos-texto .titulo-proyectos,
+  .proyectos-texto .palabra-clave {
+    padding: 0rem;
+  }
+  /* Servicios */
+  .servicios {
+    padding: 8rem 15rem;
+  }
+  .servicios .intro-servicios .titulo-servicios {
+    padding: 0rem 10rem;
+    padding-bottom: 8rem;
+  }
+  .servicios .final-servicios {
+    padding-top: 8rem;
+  }
+  /* Sobre mí */
+  .sobre-mi {
+    padding: 8rem 10rem;
+    gap: 4rem;
+  }
+  .sobre-mi .texto-principal {
+    padding-left: 5rem;
+  }
+  .sobre-mi .texto-principal h1 {
+    line-height: 2.8;
+  }
+  .sobre-mi .experiencia-columnas {
+    gap: 5rem;
+    padding: 4rem 0rem;
+  }
+  /* Contacto */
+  .contacto {
+    max-width: 100%;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8rem;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
